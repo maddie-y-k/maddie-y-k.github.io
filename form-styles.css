@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+header {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.link {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.link:last-child {
+    margin-right: 30px;
+}
+
+.link a {
+    color: #87cbff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    background: #fff;
+    padding: 2px 15px;
+    border-radius: 12px;
+    box-shadow: 10px 4px 5px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    width:100%;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(
+        #d9efff 10%,
+        #dfd9ff,
+        #ffdbd9 
+    );
+    background-attachment: fixed;
+    font-family: American Typewriter;
+    font-size: 20px;
+  }
+  
+  h1, p[id='description'] {
+    text-align: center;
+    margin: 1em auto;
+  }
+  
+  form {
+    width: 60vw;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 1em 2em 1em;
+    background-color: #FAE7EB;
+  }
+  
+  fieldset {
+    padding: 1em 0;
+    border: none;
+    border-bottom: 2px solid
+  }
+  
+  label {
+    display: block;
+    margin: 1rem 0;
+  }
+  
+  select[id='dropdown'] {
+    margin-top: 1rem;
+  }
+
+  
+  input, textarea, select {
+    width: 100%;
+    margin-top: 0.5rem;
+    min-height: 2rem;
+  }
+  
+  .inline {
+    width: unset;
+    vertical-align: middle;
+    margin: -4px 0.5rem 0 0
+  }
+  
+  input[type='submit'] {
+    display: block;
+    width: 50%;
+    margin: 1em auto;
+    background-color: #fdfd96;
+    border-color: #fde26c;
+    font-size: 15px;
+  }

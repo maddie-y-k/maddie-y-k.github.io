@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Cutive+Mono&family=Dosis:wght@300;600&family=Vujahday+Script&family=Handjet:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: linear-gradient(
+        #d9efff 10%,
+        #dfd9ff,
+        #ffdbd9 
+    );
+
+}
+
+header {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.h1-large {
+    font-size: 50px;
+}
+
+.logo {
+    display: flex;
+    max-width: 500px;
+    margin: 25px 50px;
+
+}
+
+.link {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.link:last-child {
+    margin-right: 30px;
+}
+
+.link a {
+    color: #87cbff;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    background: #fff;
+    padding: 2px 15px;
+    border-radius: 12px;
+    box-shadow: 10px 4px 5px;
+}
+
+.info {
+    margin: 50px 95px;  
+}
+
+#hello {
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.see-work-text {
+    margin-top: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    float: right;
+    font-size: 15px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.info h2,.info h2 span, #container { 
+    font-family: Cutive Mono;
+    text-shadow: 10px 7px 1.5px #a4d8ff;
+}
+
+.div-deco {
+    font-size: 40px;
+    letter-spacing: 1rem;
+    margin-left: -38px;
+}
+
+
+#text {
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    margin-right: -60px;
+}
+
+#arrow {
+    width: 375px;
+    height:130px;
+    position: absolute;
+    right: 30px;
+    margin-top: -30px;
+}
+
+.see-work-text:hover span{
+    animation: text-wave 2s ease-in-out 1 ;
+    display: inline-block;
+    animation-delay: calc(0.05s * var(--i));
+}
+@keyframes text-wave {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    40%, 100% {
+        transform: translateY(0px);
+    }
+}
+
+#container {
+    height: 100px;
+    margin-left: 200px;
+}
+
+#typewriter-text {
+    display: inline-block;
+    color:#000;
+    letter-spacing: 10px;
+    font-size: 70px;
+    vertical-align: middle;
+    font-family: Cutive Mono;
+    text-decoration: underline 2px black;
+    text-underline-offset: 10px;
+}
+
+#cursor {
+	position: absolute;
+    display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 80px;
+	background-color: #fff;
+	animation: blink .95s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: #000; 
+	}
+}
+
+#resume, #bio {
+    margin-left: 65px;
+    margin-bottom: 80px;
+    display: inline-flex;
+}
+
+.contact-info {
+    margin-left: 65px;
+    font-size: 20px;
+}
+
+.email a {
+    margin-left: 20px;
+}
+
+.github a {
+    margin-left: 30px;
+}
+
+.email {
+    margin-bottom: 10px;
+}
+
+#resume .nested-li {
+    margin-left: 15px;
+    color:#07385d;
+}
+
+#resume li, #bio li{
+    margin-top: 0.5rem;
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+#resume h2 {
+    margin: 1rem 0;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 600;
+}
+
+.resume-body, .resume-side, #bio, .contact-info{
+    width: fit-content;
+    background-color: #fff;
+    border-radius: 12px;
+    margin-right: 65px;
+    padding: 15px 30px 20px 30px;
+}
+
+#resume p {
+    /*display: flex;
+    justify-content: space-between;
+    align-items: flex-end; */
+    font-weight: 600;
+}
+
+#resume span {
+    font-weight: 500;
+}
+
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.row {
+    margin: 8px 16px;
+}
+
+.row, .row > .column {
+    padding: 10px;
+}
+
+.content > img, .content > a > img {
+    width: 100%;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    margin: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.h1-margin {
+    margin: 30px 0px 30px 65px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, rgb(123, 231, 255), rgb(227, 167, 255), rgb(253, 132, 132));
+    background-clip: text;
+    background-color: #000;
+    color: transparent;
+    -webkit-background-clip: text;
+    width: fit-content;
+}
+

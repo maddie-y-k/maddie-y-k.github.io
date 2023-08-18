@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&family=Quicksand:wght@400;500;600;700&family=Pirata+One&display=swap');
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Kalam, cursive;
+}
+
+header {
+    position: relative; 
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    max-width: 500px;
+    margin: 25px 50px;
+}
+
+.link {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.link:last-child {
+    margin-right: 30px;
+}
+
+.link a {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    background: rgb(146, 100, 26);
+    padding: 2px 15px;
+    border-radius: 12px;
+    box-shadow: 10px 4px 5px rgb(80, 54, 13);
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(255, 216, 171);
+}
+
+body {
+    background-image: url(https://www.interphaze.org/wp-content/uploads/2017/10/47b567ff37393b5c564cbe1186e90662-vintage-paper-background-old-paper-texture.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.25rem;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 0.5rem;
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+    position: center;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 70px;
+    max-width: 500px;
+}
+
+.menu-bg {
+    margin: 30px;
+    background-image: url('assets/torn_paper.png');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: contain;
+    
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    max-height: 20px;
+}
+
+hr {
+    height: 2px;
+    background-color: brown;
+    border-color: brown;
+  }
+  
+  .bottom-line {
+    margin-top: 25px;
+  }
+  
+  h1, h2 {
+    font-family: 'Pirata One', cursive;
+  }
+  
+  .item p {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .flavor, .dessert {
+    text-align: left;
+    width: 75%;
+  }
+  
+  .price {
+    text-align: right;
+    width: 25%;
+  }
+  
+  /* FOOTER */
+  
+  footer {
+    font-size: 14px;
+  }
+  
+  .address {
+    margin-bottom: 5px;
+  }
+  
+

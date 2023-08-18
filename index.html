@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#arrow").mouseenter(function() {
+                    $("#arrow").effect("shake", {direction: "right", times: 1, distance: 10});
+                })
+            })
+        </script>
+        <script src="typewriter.js" defer>
+        </script> 
+        <title>Home</title>
+    </head>
+    <body>
+        <script src="nav_links.js"></script>
+        <div class="info">
+            <h2 class="div-deco">&#60div id="hi"&#62</h2>
+            <p id="hello">Hello, I am </p>
+            <!-- <p id="name">Maddie</p> -->
+            <div id="container">
+                <div id="typewriter-text"></div><div id="cursor"></div>
+            </div>
+            <p id="text">
+                I am a budding passionate web developer with an art background.
+            </p>
+            <div class="see-work-text">
+                <span style="--i:1;">_</span>
+                <span style="--i:2;">S</span>
+                <span style="--i:3;">E</span>
+                <span style="--i:4;">E</span>
+                <span style="--i:5;">_</span>
+                <span style="--i:6;">M</span>
+                <span style="--i:7;">Y</span>
+                <span style="--i:8;">_</span>
+                <span style="--i:9;">W</span>
+                <span style="--i:10;">O</span>
+                <span style="--i:11;">R</span>
+                <span style="--i:12;">K</span>
+                <span style="--i:13;">_</span>
+                <a href="projects.html" id="see-work-link"><img id="arrow" src="assets/arrow.png" alt="arrow"></a>
+            </div>
+            <h2 class="div-deco">&#60/div&#62</h2>
+        </div>
+    </body>
+</html>
+
+
