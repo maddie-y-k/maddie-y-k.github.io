@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&family=Quicksand:wght@400;500;600;700&family=Pirata+One&display=swap');
+@font-face {
+  font-family: Weightless-Regular;
+  src: url(assets/Weightless-Regular.otf);
+}
 
 * {
     margin: 0;
@@ -16,31 +20,49 @@ header {
     height: 80px;
 }
 
-.logo {
-    display: flex;
-    max-width: 500px;
-    margin: 25px 50px;
+.navbar-brand {
+    font-family: Weightless-Regular;
+    font-size: 50px !important;
+    font-weight: bold;
+    padding-top: 10px;
 }
+
 
 .link {
     display: inline;
     margin: 0 0.5em;
 }
 
-.link:last-child {
-    margin-right: 30px;
-}
-
 .link a {
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
-    background: rgb(146, 100, 26);
-    padding: 2px 15px;
+    background: rgba(66, 42, 8, 0.752);
+    padding: 5px auto;
     border-radius: 12px;
-    box-shadow: 10px 4px 5px rgb(80, 54, 13);
+    box-shadow: 0px 0px 15px #000;
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+    text-align: center;
     font-family: 'Quicksand', sans-serif;
-    color: rgb(255, 216, 171);
+    color: rgba(255, 255, 255, 0.853);
+}
+
+#offcanvasNavbar {
+  background: url(assets/torn_paper.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offcanvas-body {
+  padding-top: 25vh !important;
+}
+
+.btn-close {
+  color: #fff !important;
+  opacity: 1;
 }
 
 body {
@@ -82,7 +104,7 @@ h1, h2, p {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding: 70px;
+    padding: 50px;
     max-width: 500px;
 }
 
@@ -93,8 +115,6 @@ h1, h2, p {
     background-attachment: local;
     background-position: center;
     background-size: contain;
-    
-
 }
 
 img {
@@ -109,41 +129,88 @@ hr {
     height: 2px;
     background-color: brown;
     border-color: brown;
-  }
+}
   
-  .bottom-line {
-    margin-top: 25px;
-  }
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: 'Pirata One', cursive;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+span {
+  display: block;
+}
   
-  h1, h2 {
-    font-family: 'Pirata One', cursive;
+@media screen and (max-width: 600px) {
+  .menu {
+    width: 90%;
+    padding: 12vw;
   }
-  
+
+  .navbar-brand {
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 4vw !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  h2 {
+    font-size: 2.5vw !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  hr {
+    margin: 0.25rem !important;
+  }
+
+  .established {
+    margin-bottom: 0.25rem;
+  }
+
   .item p {
-    display: inline-block;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 18px;
+    font-size: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .item {
+    margin: -5px;
+  }
+
+  img {
+    max-width: 40vw;
+    max-height: 2vh;
+  }
+
+  .menu-bg {
+    margin-top: -10px;
+  }
+
+  .credit {
+    font-size: 0.5em;
   }
   
-  .flavor, .dessert {
-    text-align: left;
-    width: 75%;
-  }
-  
-  .price {
-    text-align: right;
-    width: 25%;
-  }
-  
-  /* FOOTER */
-  
-  footer {
-    font-size: 14px;
-  }
-  
-  .address {
-    margin-bottom: 5px;
-  }
+}
   
 

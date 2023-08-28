@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Cutive+Mono&family=Dosis:wght@300;600&family=Vujahday+Script&family=Handjet:wght@600&display=swap');
+@font-face {
+    font-family: Weightless-Regular;
+    src: url(assets/Weightless-Regular.otf);
+}
 
 * {
     margin: 0;
@@ -13,42 +17,24 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    /*justify-content: flex-start;*/
     background-image: linear-gradient(
         #d9efff 10%,
         #dfd9ff,
         #ffdbd9 
     );
-
-}
-
-header {
-    position: relative;
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .h1-large {
     font-size: 50px;
 }
 
-.logo {
-    display: flex;
-    max-width: 500px;
-    margin: 25px 50px;
-
-}
-
-.link {
-    display: inline;
-    margin: 0 0.5em;
-}
-
-.link:last-child {
-    margin-right: 30px;
+.navbar-brand {
+    font-family: Weightless-Regular;
+    font-size: 50px !important;
+    padding-top: 10px;
 }
 
 .link a {
@@ -57,25 +43,34 @@ header {
     font-weight: 500;
     text-decoration: none;
     background: #fff;
-    padding: 2px 15px;
+    padding: 5px auto;
     border-radius: 12px;
-    box-shadow: 10px 4px 5px;
+    box-shadow: 0px 0px 10px;
+    margin: 10px 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.link a:hover {
+    color:#19c9ff
 }
 
 .info {
-    margin: 50px 95px;  
+    margin: 100px 45px;  
 }
 
 #hello {
     font-size: 40px;
     margin-top: 40px;
+    width: 100%;
 }
 
 .see-work-text {
     margin-top: 50px;
-    margin-right: 50px;
+    margin-right: 140px;
     text-decoration: none;
-    float: right;
+    text-align: right;
     font-size: 15px;
     color: #000;
     font-weight: bolder;
@@ -89,23 +84,27 @@ header {
 .div-deco {
     font-size: 40px;
     letter-spacing: 1rem;
-    margin-left: -38px;
+    width: 50%;
+    margin-top: 30px;
+    /*margin-left: -38px;*/
 }
 
 
 #text {
     font-size: 20px;
-    display: flex;
-    justify-content: right;
-    margin-right: -60px;
+    text-align: right;
+    display: block;
+    margin-top: 30px;
+    /*margin-right: -60px;*/
 }
 
 #arrow {
     width: 375px;
-    height:130px;
+    height:50px;
     position: absolute;
     right: 30px;
-    margin-top: -30px;
+    margin-top: 10px;
+    margin-right: 15px;
 }
 
 .see-work-text:hover span{
@@ -126,8 +125,8 @@ header {
 }
 
 #container {
-    height: 100px;
     margin-left: 200px;
+    min-height: 105px;
 }
 
 #typewriter-text {
@@ -137,12 +136,13 @@ header {
     font-size: 70px;
     vertical-align: middle;
     font-family: Cutive Mono;
-    text-decoration: underline 2px black;
+    min-height: 25px;
+    /*text-decoration: underline 2px black;
     text-underline-offset: 10px;
+    */
 }
 
 #cursor {
-	position: absolute;
     display: inline-block;
 	vertical-align: middle;
 	width: 3px;
@@ -161,8 +161,8 @@ header {
 }
 
 #resume, #bio {
-    margin-left: 65px;
-    margin-bottom: 80px;
+    margin: 30px;
+    margin-bottom: 10vh;
     display: inline-flex;
 }
 
@@ -205,19 +205,20 @@ header {
     width: fit-content;
     background-color: #fff;
     border-radius: 12px;
-    margin-right: 65px;
     padding: 15px 30px 20px 30px;
 }
 
+.resume-body {
+    margin-right: 20px;
+}
+
 #resume p {
-    /*display: flex;
-    justify-content: space-between;
-    align-items: flex-end; */
     font-weight: 600;
 }
 
 #resume span {
     font-weight: 500;
+    display: block;
 }
 
 .underline {
@@ -226,44 +227,21 @@ header {
 }
 
 .row {
-    margin: 8px 16px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 10vh;
 }
 
-.row, .row > .column {
-    padding: 10px;
-}
-
-.content > img, .content > a > img {
+.content > a > img {
     width: 100%;
-}
-
-.column {
-    float: left;
-    width: 25%;
-    margin: 10px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .content {
     background-color: white;
     padding: 10px;
-}
-
-@media screen and (max-width: 900px) {
-    .column {
-        width: 50%
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
+    height: 100%;
+    border-radius: 7px;
+    box-shadow: 5px 5px 2px 2px #a4d8ff;
 }
 
 .h1-margin {
@@ -277,5 +255,137 @@ header {
     color: transparent;
     -webkit-background-clip: text;
     width: fit-content;
+}
+
+@media screen and (max-width: 900px) {
+    .col {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding-top: 0px;
+    }
+
+    .navbar-brand {
+        font-size: 40px !important;
+    }
+
+    .info {
+        margin: 50px 20px;
+    }
+
+    .div-deco {
+        font-size: 100%;
+    }
+
+    #hello {
+        font-size: 100%;
+        margin-top: 50px;
+    }
+
+    #container {
+        margin-left: 80px;
+        margin-top: -10px;
+        min-height: fit-content;
+        margin-bottom: 50px;
+    }
+
+    #typewriter-text {
+        font-size: 100%;
+    }
+    
+    #cursor {
+        display: inline-block;
+        height: 3vh;
+        width: 1px;
+    }
+
+    #text {
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .see-work-text {
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        font-size: 70%;
+        height: fit-content;
+    }
+
+    #arrow {
+        width: 60%;
+        height: 4vh;
+        margin-top: 0px;
+        position: unset;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+
+    .div-deco {
+        font-size: 100%;
+        letter-spacing: 1rem;
+        margin-top: 50px;
+    }
+
+    .h1-large {
+        font-size: 4vh;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    #bio {
+        margin: 0px 2rem 50% 2rem;
+        padding: 20px 20px 20px 10px;
+    }
+
+    #bio h3 {
+        text-align: center;
+        font-size: 2vh !important;
+    }
+
+    .content h3 {
+        font-size: 2vh !important;
+    }
+
+    .content p {
+        font-size: 80%;
+    }
+
+    h2 {
+        font-size: 2vh !important;
+    }
+
+    .resume-body, .resume-side {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .resume-side {
+        margin-top: 10px;
+        width: auto;
+    }
+
+    #resume {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10vh;
+        display: inline-block;
+    }
+
+    #resume li {
+        font-size: 95%;
+        margin-left: 0px;
+    }
+
+    #resume p {
+        margin-bottom: 0;
+    }
+
 }
 
