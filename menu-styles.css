@@ -11,15 +11,6 @@
     font-family: Kalam, cursive;
 }
 
-header {
-    position: relative; 
-    justify-content: space-between;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: 80px;
-}
-
 .navbar-brand {
     font-family: Weightless-Regular;
     font-size: 50px !important;
@@ -60,10 +51,6 @@ header {
   padding-top: 25vh !important;
 }
 
-.btn-close {
-  color: #fff !important;
-  opacity: 1;
-}
 
 body {
     background-image: url(https://www.interphaze.org/wp-content/uploads/2017/10/47b567ff37393b5c564cbe1186e90662-vintage-paper-background-old-paper-texture.jpg);
@@ -71,7 +58,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -146,7 +133,7 @@ h1, h2 {
   font-size: 18px;
 }
 
-.flavor, .dessert {
+.food, .drink {
   text-align: left;
   width: 75%;
 }
@@ -178,6 +165,7 @@ span {
   h2 {
     font-size: 2.5vw !important;
     margin-bottom: 0.25rem !important;
+    margin-top: 0.5rem !important;
   }
 
   hr {
