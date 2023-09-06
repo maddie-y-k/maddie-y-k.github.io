@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <title>React Flashcards</title>
+    </head>
+    <body>
+        <script src="nav_links.js"></script>
+        <div id="app"></div>
+        <script type="text/babel">
+            function CardEditor({switchMode, cards, addCard, removeCard}) {
+                const [card, setCard] = React.useState({
+                    front: "",
+                    back: ""
+                })
+
+                return (
+                    <div>
+                        <h2 id="card-heading" className="gradient-text">Card Editor</h2>
+                        <table className="table table-responsive table-bordered table-info table-hover">
+                            <thead className="center">
+                                <th>Front</th>
+                                <th>Back</th>
+                                <th>Remove</th>
+                            </thead>
+                            <tbody>
+                                {cards.map((card, i) => {
+                                    return (<tr key={i}>
+                                        <td className="center">{card.front}</td>
+                                        <td>{card.back}</td>
+                                        <td className="center"><button className="padButton" id="removeButton" data-index={i} onClick={removeCard}><i className="fa-regular fa-circle-xmark"></i></button></td>
+                                    </tr>
+                                )})}
+                            </tbody>
+                        </table>
+                        <br/>
+                        <div className="centerButtons row">
+                        <label htmlFor="front" id="front-label" className="col mr-auto ml-auto text-center">Front of Card: <input onChange={handleChange} id="front" name="front" value={card.front} autoFocus/></label>
+                        <label htmlFor="back" id="back-label" className="col mr-auto ml-auto text-center">Back of Card: <input onChange={handleChange} id="back" name="back" value={card.back}/></label>
+                        </div>
+                        <div className="inputButton">
+                        <button className="padButton" id="inputButton" onClick={addCards}>Add Card</button>
+                        </div>
+                        <hr/>
+                        <div className="centerButtons">
+                        <button className="padButton" onClick={switchMode}>View Cards</button>
+                        </div>
+                    </div>
+                )
+
+            function handleChange(event) {
+                setCard(previousState =>{
+                    return {...previousState,
+                    [event.target.name]: event.target.value
+                    }
+                })
+                
+            }
+
+            function addCards() {
+                {addCard(card.front, card.back)}
+                setCard({
+                    front: "",
+                    back: ""
+                })
+
+            }
+        }
+
+            function CardViewer({switchMode, cards}) {
+                const [currSide, setCurrSide] = React.useState({
+                    front: true,
+                    index: 0
+                })
+                if (cards.length == 0) {
+                    return (
+                        <div>
+                            <p className="center">Please create some cards</p>
+                            <hr/>
+                            <div className="centerButtons">
+                                <button className="padButton" onClick={switchMode}>Edit Cards</button>
+                            </div>
+                            </div>
+                            )
+                }
+                else {
+                    return (
+                        <div>
+                            <h2 id="card-heading" className="gradient-text">Card Viewer</h2>
+                            <div id="card" onClick={flipCard}>
+                                <h2 id="card-content" className="center">{showCard()}</h2>
+                            </div>
+                            <p className="center"> Click on card to flip! </p>
+                            <div className="centerButtons">
+                                <button className="padButton" onClick={switchMode}>Edit Cards</button>
+                                <button className="padButton" onClick={randomizeCards}>Randomize</button>
+                                <button className="padButton" onClick={nextCard}>Next Card</button>
+                            </div>
+                        </div>
+                    )
+                }
+                
+                function showCard() {
+                    return currSide.front ? cards[currSide.index].front : cards[currSide.index].back
+                }
+
+                function randomizeCards() {
+                    var randomCard;
+                    if (cards.length === 1) {
+                        randomCard = 0;
+                    } 
+                    else {
+                        do {
+                            randomCard = Math.round(Math.random()*(cards.length-1))
+                        }
+                        while (randomCard === currSide.index)
+                    }
+                    setCurrSide(previousState => {
+                        return {
+                            ...previousState,
+                            front: true,
+                            index: randomCard
+                        }
+                    })
+                }
+
+                function flipCard() {
+                    setCurrSide(previousState => {
+                        return{
+                            ...previousState,
+                            front: !currSide.front
+                        }
+                    })
+                }
+                
+                function nextCard() {
+                    if (currSide.index === cards.length-1) {
+                        setCurrSide(previousState => {
+                            return {
+                                ...previousState,
+                                front: true,
+                                index: 0
+                            }
+                        })
+                    }
+                    else {
+                        setCurrSide(previousState => {
+                            return {
+                                ...previousState,
+                                front: true,
+                                index: currSide.index + 1
+                            }
+                        })
+                    }
+
+                }
+            }
+
+            
+            function App() {
+                const [state, setState] = React.useState({
+                    editor: true,
+                    cards: [
+                        {front: "CDN", back: "Content Delivery Network - CDNs deliver cached, static content from a network of servers across the globe"}, 
+                        {front: "JSX", back: "A syntax extension to JavaScript"},
+                        {front: "props", back: "Inputs to a React component. They are data passed down from a parent component to a child component"},
+                        {front: "state", back: "Component specific memory"}
+                    ]
+                });
+
+                if (state.editor === true) {
+                    return (
+                        <CardEditor 
+                            switchMode={switchMode}
+                            cards={state.cards}
+                            addCard={addCard}
+                            removeCard={removeCard}
+                        />
+                    );
+                } 
+                else {
+                    return (
+                        <CardViewer 
+                            switchMode={switchMode}
+                            cards={state.cards}
+                        />
+                    );
+                }
+                
+                
+
+                
+
+            function switchMode() {
+                setState(previousState => {
+                    return {
+                        ...previousState,
+                        editor: !state.editor
+                    }
+                })
+            }
+
+            function addCard(front, back) {
+                setState(previousState => {
+                    return {
+                        ...previousState,
+                        cards: [...state.cards, { front: front, back: back }]
+                    }
+                })
+            }
+
+            function removeCard(event) {
+                setState(previousState => {
+                    const cards = [...state.cards]
+                    cards.splice(event.target.dataset.index, 1)
+                    return {
+                        ...previousState,
+                        cards: cards
+                    }
+                })
+            }
+                
+            }
+            const container = document.getElementById('app');
+            const root = ReactDOM.createRoot(container);
+            root.render(<App />)
+        </script>
+    </body>
+</html>
