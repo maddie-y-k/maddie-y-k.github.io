@@ -1,15 +1,10 @@
-# Portfolio Website
 
-I am a budding web developer that transitioned from data science and analytics and this is my portfolio site for web development!
+  # Portfolio
 
-It includes some tutorials examples I have completed with my own twist, along with other information about me and my career journey thus far.
+  Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
 
-This is the first website I built using what I have learned with HTML/CSS and Javascript. 
-
-I plan to update and add more projects to it as I learn and grow as a web developer!
-
-## Credits
-
-Projects are inspired by tutorials from freeCodeCamp.
-
-Tying and deleting animation code reference: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
+  To preview and run the project on your device:
+  1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+  2) In the terminal, run `npm install`
+  3) Run `npm start` to view project in browser
+  

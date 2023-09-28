@@ -1,63 +1,365 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-954P3TQ0BT"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Maddie K</title>
 
-        gtag('config', 'G-954P3TQ0BT');
-        </script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-        <script>
-            $(document).ready(function() {
-                $("#arrow").mouseenter(function() {
-                    $("#arrow").effect("shake", {direction: "right", times: 1, distance: 10});
-                })
-            })
-        </script>
-        <script src="typewriter.js" defer>
-        </script> 
-        <title>Home</title>
-    </head>
-    <body>
-        <script src="nav_links.js"></script>
-        <div class="info">
-            <h2 class="div-deco">&#60div id="hi"&#62</h2>
-            <p id="hello">Hello, I am </p>
-            <div id="container">
-                <div id="typewriter-text"></div><div id="cursor"></div>
-            </div>
-            <p id="text" class="container-fluid">
-                I am a budding passionate web developer with an art background.
-            </p>
-            <div class="see-work-text">
-                <span style="--i:1;">_</span>
-                <span style="--i:2;">S</span>
-                <span style="--i:3;">E</span>
-                <span style="--i:4;">E</span>
-                <span style="--i:5;">_</span>
-                <span style="--i:6;">M</span>
-                <span style="--i:7;">Y</span>
-                <span style="--i:8;">_</span>
-                <span style="--i:9;">W</span>
-                <span style="--i:10;">O</span>
-                <span style="--i:11;">R</span>
-                <span style="--i:12;">K</span>
-                <span style="--i:13;">_</span>
-                <a href="projects.html" id="see-work-link"><img id="arrow" src="assets/arrow.png" alt="arrow"></a>
-            </div>
-            <h2 class="div-deco">&#60/div&#62</h2>
+    <meta name="description" content="Maddie Kong's Portfolio" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cutive Mono:wght@400&display=swap"
+    />
+    <script src="projects/typewriter.js" defer></script>
+  </head>
+  <body>
+    <div class="desktop-1">
+      <div class="contact-section" data-scroll-to="contactSectionContainer">
+        <img
+          class="contact-section-child"
+          alt=""
+          src="./public/rectangle-171@2x.png"
+        />
+
+        <div class="contact-heading">
+          <div class="contact-heading-child"></div>
+          <img
+            class="contact-heading-item"
+            alt=""
+            src="./public/rectangle-16.svg"
+          />
+
+          <div class="contact">CONTACT</div>
         </div>
-    </body>
+        <div class="vector-parent">
+          <img class="frame-child" alt="" src="./public/rectangle-21.svg" />
+
+          <img class="frame-item" alt="" src="./public/rectangle-222.svg" />
+
+          <div class="hello-parent">
+            <div class="hello">Hello!</div>
+            <div class="with-a-background-container">
+              <p class="with-a-background">
+                With a background that spans the worlds of art and data science,
+                I have cultivated a diverse skill set that allows me to approach
+                coding with a fresh and creative perspective.
+              </p>
+              <p class="with-a-background">
+                I would love to gain more professional experience and develop
+                (pun intended!) my skills further as a developer and designer.
+              </p>
+            </div>
+            <div class="if-you-would">
+              If you would like to hire me, please contact me by email at:
+            </div>
+            <a
+              class="email-button"
+              id="email"
+              href="mailto:ykong@oswego.edu?subject=Hello there!"
+            >
+              <div class="ykongoswegoedu">ykong@oswego.edu</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="experience" data-scroll-to="experienceContainer">
+        <div class="experience-heading">
+          <div class="contact-heading-child"></div>
+          <img
+            class="contact-heading-item"
+            alt=""
+            src="./public/rectangle-16.svg"
+          />
+
+          <div class="experience1">Experience</div>
+        </div>
+        <div class="experience-inner">
+          <div class="html-css-figma-bootstrap-j-parent">
+            <div class="html-css-figma">
+              HTML, CSS, Figma, Bootstrap, JavaScript, React.JS, Git
+            </div>
+            <div class="star-point-parent">
+              <img
+                class="star-point-icon"
+                alt=""
+                src="assets/Star Point.png"
+              />
+
+              <div class="group-child"></div>
+              <img class="group-item" alt="" src="./public/frame-15.svg" />
+
+              <div class="freelance-web-designer">Freelance Web Designer</div>
+            </div>
+            <div class="python-sql-git">
+              Python, SQL, Git, AWS, Jupyter Notebook, PowerPoint, Tableau
+            </div>
+            <div class="star-point-group">
+              <img
+                class="star-point-icon1"
+                alt=""
+                src="assets/Star Point.png"
+              />
+
+              <div class="group-inner"></div>
+              <div class="data-science-intern">Data Science Intern</div>
+              <img class="frame-icon" alt="" src="./public/frame-16.svg" />
+            </div>
+            <div class="python-html-css">
+              Python, HTML, CSS, R, TensorFlow, Microsoft Access, SQL
+            </div>
+            <div class="star-point-container">
+              <img
+                class="star-point-icon2"
+                alt=""
+                src="assets/Star Point.png"
+              />
+
+              <div class="line-div"></div>
+              <div class="biomedical-health-informatics">
+                Biomedical Health Informatics M.S.
+              </div>
+              <img class="group-child1" alt="" src="./public/frame-17.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="work-samples" data-scroll-to="workSamplesContainer">
+        <div class="work-samples-heading">
+          <div class="contact-heading-child"></div>
+          <img
+            class="work-samples-heading-item"
+            alt=""
+            src="./public/rectangle-16.svg"
+          />
+
+          <div class="contact">WoRk SaMpLeS</div>
+        </div>
+        <div class="frame-parent">
+          <div class="restaurant-thumbnail-parent">
+            <a
+              class="restaurant-thumbnail"
+              id="restaurant-mockup"
+              href="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F55y5fmyXLAq7LlcoqBCGK6%2FRestaurant-App%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D7G8f7qh64f7QwBB8-1"
+              target="_blank"
+            >
+              <img
+                class="restaurant-thumbnail-child"
+                alt=""
+                src="./public/rectangle-7@2x.png"
+              />
+
+              <img
+                class="restaurant-thumbnail-item"
+                alt=""
+                src="./public/rectangle-271.svg"
+              />
+
+              <b class="restaurant-app-mock-up">Restaurant App Mock-Up</b>
+              <b class="restaurant-app-design"
+                >Restaurant app design using Figma</b
+              >
+            </a>
+            <a
+              class="flashcard-thumbnail"
+              id="flashcard-app"
+              href="projects/react.html"
+              target="_blank"
+            >
+              <img
+                class="restaurant-thumbnail-child"
+                alt=""
+                src="./public/rectangle-91@2x.png"
+              />
+
+              <img
+                class="restaurant-thumbnail-item"
+                alt=""
+                src="./public/rectangle-271.svg"
+              />
+
+              <b class="react-flashcard-app">React Flashcard App</b>
+              <b class="created-using-javascript"
+                >Created using JavaScript, HTML & CSS</b
+              >
+            </a>
+          </div>
+          <div class="restaurant-thumbnail-parent">
+            <a
+              class="flashcard-thumbnail"
+              id="html-form"
+              href="projects/projects-form.html"
+              target="_blank"
+            >
+              <img
+                class="restaurant-thumbnail-child"
+                alt=""
+                src="./public/rectangle-121@2x.png"
+              />
+
+              <img
+                class="restaurant-thumbnail-item"
+                alt=""
+                src="./public/rectangle-271.svg"
+              />
+
+              <b class="restaurant-app-mock-up">HTML Form</b>
+              <b class="restaurant-app-design">Created using HTML & CSS</b>
+            </a>
+            <a
+              class="flashcard-thumbnail"
+              id="html-menu"
+              href="projects/projects-menu.html"
+              target="_blank"
+            >
+              <img
+                class="restaurant-thumbnail-child"
+                alt=""
+                src="./public/rectangle-131@2x.png"
+              />
+
+              <img
+                class="restaurant-thumbnail-item"
+                alt=""
+                src="./public/rectangle-271.svg"
+              />
+
+              <b class="react-flashcard-app">Tavern Menu Design</b>
+              <b class="created-using-javascript">Created using HTML & CSS</b>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="landing-section">
+        <div class="nav-wrapper">
+          <nav class="nav" id="nav">
+            <div class="projects" id="pROJECTSText">&lt; PROJECTS /&gt;</div>
+            <div class="projects" id="aBOUTText">ABOUT</div>
+            <div class="projects" id="cONTACTText1">CONTACT</div>
+          </nav>
+        </div>
+        <div class="hello-i-am-parent">
+          <div class="hello-i-am">Hello I am,</div>
+          <div class="a-learner">
+            <div id="typewriter-text"></div>
+            <div id="cursor"></div>
+          </div>
+        </div>
+        <div class="frame-group">
+          <div class="frame">
+            <div class="frame-inner"></div>
+            <div class="rectangle-div"></div>
+            <img
+              class="rectangle-icon"
+              alt=""
+              src="./public/rectangle-1@2x.png"
+              data-animate-on-scroll
+            />
+
+            <div class="frame-child1"></div>
+          </div>
+          <div class="i-am-a-ux-designer-web-devel-parent">
+            <div class="i-am-a-container">
+              <p class="with-a-background">
+                I am a UX designer & web developer based in NYC!
+              </p>
+              <p class="with-a-background">&nbsp;</p>
+              <p class="with-a-background">
+                Grow with me on my journey leveraging Figma, React, JavaScript,
+                HTML and CSS.
+              </p>
+              <p class="with-a-background">
+                I am excited about the opportunity to contribute my skills to
+                your dynamic team and create a bridge between technology and
+                human expression, one line of code at a time!
+              </p>
+            </div>
+            <a
+              class="hire-me-wrapper"
+              id="hire-me"
+              href="mailto:ykong@oswego.edu?subject=Hello there!"
+            >
+              <div class="hire-me">HIRE ME</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var restaurantThumbnail = document.getElementById("restaurant-mockup");
+      if (restaurantThumbnail) {
+        restaurantThumbnail.addEventListener("click", function () {
+          window.open(
+            "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F55y5fmyXLAq7LlcoqBCGK6%2FRestaurant-App%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3D7G8f7qh64f7QwBB8-1"
+          );
+        });
+      }
+      
+      var pROJECTSText = document.getElementById("pROJECTSText");
+      if (pROJECTSText) {
+        pROJECTSText.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='workSamplesContainer']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var aBOUTText = document.getElementById("aBOUTText");
+      if (aBOUTText) {
+        aBOUTText.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='experienceContainer']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var cONTACTText1 = document.getElementById("cONTACTText1");
+      if (cONTACTText1) {
+        cONTACTText1.addEventListener("click", function () {
+          var anchor = document.querySelector(
+            "[data-scroll-to='contactSectionContainer']"
+          );
+          if (anchor) {
+            anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+          }
+        });
+      }
+      
+      var scrollAnimElements = document.querySelectorAll("[data-animate-on-scroll]");
+      var observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting || entry.intersectionRatio > 0) {
+              const targetElement = entry.target;
+              targetElement.classList.add("animate");
+              observer.unobserve(targetElement);
+            }
+          }
+        },
+        {
+          threshold: 0.15,
+        }
+      );
+      
+      for (let i = 0; i < scrollAnimElements.length; i++) {
+        observer.observe(scrollAnimElements[i]);
+      }
+      </script>
+  </body>
 </html>
-
-
