@@ -36,16 +36,18 @@
                         <h2 id="card-heading" className="gradient-text">Card Editor</h2>
                         <table className="table table-responsive table-bordered table-info table-hover">
                             <thead className="center">
+                                <tr>
                                 <th>Front</th>
                                 <th>Back</th>
                                 <th>Remove</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 {cards.map((card, i) => {
                                     return (<tr key={i}>
                                         <td className="center">{card.front}</td>
                                         <td>{card.back}</td>
-                                        <td className="center"><button className="padButton" id="removeButton" data-index={i} onClick={removeCard}><i className="fa-regular fa-circle-xmark"></i></button></td>
+                                        <td className="center"><button className="padButton" id="removeButton" data-index={i} onClick={() => removeCard(i)}><i className="fa-regular fa-circle-xmark"></i></button></td>
                                     </tr>
                                 )})}
                             </tbody>
@@ -226,10 +228,10 @@
                 })
             }
 
-            function removeCard(event) {
+            function removeCard(index) {
                 setState(previousState => {
                     const cards = [...state.cards]
-                    cards.splice(event.target.dataset.index, 1)
+                    cards.splice(index, 1)
                     return {
                         ...previousState,
                         cards: cards

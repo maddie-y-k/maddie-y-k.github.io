@@ -41,7 +41,7 @@
 }
 
 #offcanvasNavbar {
-  background: url(assets/torn_paper.png);
+  background: url(./assets/torn_paper.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

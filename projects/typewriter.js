@@ -2,7 +2,7 @@
 var _CONTENT = [ 
 	"a learner.",
 	"an artist.",
-	"a developer.",
+	"a designer.",
     "Maddie."
 ];
 
